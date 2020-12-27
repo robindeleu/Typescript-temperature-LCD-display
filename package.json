@@ -1,0 +1,46 @@
+{
+  "name": "lcd-temperature-robind",
+  "version": "1.0.3",
+  "description": "this is my libriary to convert a temperature to a lcd style output",
+  "main": "index.ts",
+  "scripts": {
+    "nojekyll": "nodetouch docs/.nojekyll",
+    "docs": "typedoc && npm run nojekyll",
+    "lint": "eslint ./src --ext .ts",
+    "markdowntest": "markdownlint *.md --ignore node_modules",
+    "prepublish": "npm run lint",
+    "jesttest": "jest",
+    "test:watch": "jest --coverage --watchAll",
+    "coverage": "jest --coverage",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vives-software-engineering-2020/examenopdracht-robindeleu.git"
+  },
+  "keywords": [
+    "lcd",
+    "temperature",
+    "digits"
+  ],
+  "author": "robindeleu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vives-software-engineering-2020/examenopdracht-robindeleu/issues"
+  },
+  "homepage": "https://github.com/vives-software-engineering-2020/examenopdracht-robindeleu#readme",
+  "dependencies": {
+    "typedoc": "^0.17.7",
+    "typescript": "^3.9.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "@typescript-eslint/eslint-plugin": "^3.0.0",
+    "@typescript-eslint/parser": "^3.0.0",
+    "eslint": "^7.1.0",
+    "jest": "^26.0.1",
+    "markdownlint": "^0.20.3",
+    "touch": "^3.1.0",
+    "ts-jest": "^26.0.0"
+  }
+}

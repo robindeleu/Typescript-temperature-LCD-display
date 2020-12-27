@@ -1,0 +1,404 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>lcd-temperature-robind</title>
+	<meta name="description" content="Documentation for lcd-temperature-robind">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">lcd-temperature-robind</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>lcd-temperature-robind</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#temperatuur-lcd-display-by-robin-deleu" id="temperatuur-lcd-display-by-robin-deleu" style="color: inherit; text-decoration: none;">
+					<h1>Temperatuur LCD Display by Robin Deleu</h1>
+				</a>
+				<p><a href="https://www.npmjs.com/package/lcd-temperature-robind"><img src="https://img.shields.io/npm/v/lcd-temperature-robind.svg" alt="NPM Version"></a>
+					<a href="https://lbesson.mit-license.org/"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT license"></a>
+				<img src="https://img.shields.io/npm/dw/lcd-temperature-robind" alt="NPM Downloads"></p>
+				<p>This program acts as a temperaturedisplay. When you give input the program it show you the temperature in <em>digitstyle</em>.</p>
+				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
+					<h2>Getting Started</h2>
+				</a>
+				<a href="#prerequisites" id="prerequisites" style="color: inherit; text-decoration: none;">
+					<h3>Prerequisites</h3>
+				</a>
+				<p>You will need to instal node.js and ts-node to be able to run this program.</p>
+				<p>Instal node.js:</p>
+				<pre><code class="language-bash">cinst nodejs.install</code></pre>
+				<p>Instal ts-node</p>
+				<pre><code class="language-bash">npm install -g ts-node</code></pre>
+				<p>Or you just can use the npm library like this:</p>
+				<pre><code class="language-bash">npm i lcd-temperature-robind</code></pre>
+				<a href="#using-the-program" id="using-the-program" style="color: inherit; text-decoration: none;">
+					<h3>Using the program</h3>
+				</a>
+				<p>The program is ready to use, if you want to use all functions you will need to edit some things.
+				The options are set a frame around the display, the other option is to make all digits bigger.</p>
+				<p>You can edit everything in the configurationfile in the src directory.</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">const</span> framework = <span class="hljs-number">1</span>
+<span class="hljs-keyword">const</span> bignumbers = <span class="hljs-number">1</span></code></pre>
+				<p>Framework stands for the frame around the digits.
+				If you leave it on 1 it will have the frame, if you set it to 0 the frame will not be displayed.</p>
+				<p>Bignumbers stands how big the numbers would be (small or large).
+				If you leave it on 1 it will have the big numbers, if you set it to 0 the numbers will be displayed smaller.</p>
+				<p>If you want to edit the temperature that will be displayed you can change the value on the temperatuur file that is located in the src directory.</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">const</span> temp = <span class="hljs-number">67.89</span></code></pre>
+				<p>The temperature is in °C and is limited to 2 digits after the decimal point.</p>
+				<p>If you want to run the program, you will need to run this command:</p>
+				<pre><code class="language-bash">ts-node .\index.ts</code></pre>
+				<a href="#examples-of-code-output" id="examples-of-code-output" style="color: inherit; text-decoration: none;">
+					<h2>Examples of code output</h2>
+				</a>
+				<a href="#example-one" id="example-one" style="color: inherit; text-decoration: none;">
+					<h3>Example one</h3>
+				</a>
+				<p>The settings are: frame on, bignumbers on and it&#39;s 67,89 °C.</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">const</span> framework = <span class="hljs-number">1</span>
+<span class="hljs-keyword">const</span> bignumbers = <span class="hljs-number">1</span>
+<span class="hljs-keyword">const</span> temp = <span class="hljs-number">67.89</span></code></pre>
+				<p>output:</p>
+				<pre><code class="language-bash"> -------
+
+ |  --  |
+ | |    |
+ | |    |
+ |  --  |
+ | |  | |
+ | |  | |
+ |  --  |
+
+
+ |  --  |
+ |    | |
+ |    | |
+ |    | |
+ |    | |
+
+
+ |      |
+ |   /  |
+
+
+ |  --  |
+ | |  | |
+ | |  | |
+ |  --  |
+ | |  | |
+ | |  | |
+ |  --  |
+
+
+ |  --  |
+ | |  | |
+ | |  | |
+ |  --  |
+ |    | |
+ |    | |
+ |  --  |
+
+
+ |  --  |
+ | |  | |
+ | |  | |
+ |  --  |
+
+ |  --  |
+ | |    |
+ | |    |
+ | |    |
+ | |    |
+ |  --  |
+
+ -------</code></pre>
+				<a href="#example-two" id="example-two" style="color: inherit; text-decoration: none;">
+					<h3>Example two</h3>
+				</a>
+				<p>The settings are: frame off, bignumbers on and it&#39;s 20,54 °C.</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">const</span> framework = <span class="hljs-number">0</span>
+<span class="hljs-keyword">const</span> bignumbers = <span class="hljs-number">1</span>
+<span class="hljs-keyword">const</span> temp = <span class="hljs-number">20.54</span></code></pre>
+				<p>output:</p>
+				<pre><code class="language-bash">   --
+    |
+    |
+  --
+ |
+ |
+  --
+
+
+  --
+ |  |
+ |  |
+ |  |
+  --
+
+
+
+  /
+
+
+  --
+ |
+ |
+  --
+    |
+    |
+  --
+
+
+ |  |
+ |  |
+  --
+    |
+    |
+
+
+  --
+ |  |
+ |  |
+  --
+
+  --
+ |
+ |
+ |
+ |
+  --</code></pre>
+				<a href="#example-three" id="example-three" style="color: inherit; text-decoration: none;">
+					<h3>Example three</h3>
+				</a>
+				<p>The settings are: frame off, bignumbers off and it&#39;s 11,86 °C.</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">const</span> framework = <span class="hljs-number">0</span>
+<span class="hljs-keyword">const</span> bignumbers = <span class="hljs-number">0</span>
+<span class="hljs-keyword">const</span> temp = <span class="hljs-number">11.86</span></code></pre>
+				<p>output:</p>
+				<pre><code class="language-bash">
+   |
+   |
+
+
+   |
+   |
+
+
+
+  /
+
+
+  -
+ | |
+  -
+ | |
+  -
+
+
+  -
+ |
+  -
+ | |
+  -
+
+
+  -
+ | |
+  -
+
+  -
+ |
+ |
+  -</code></pre>
+				<a href="#example-four" id="example-four" style="color: inherit; text-decoration: none;">
+					<h3>Example four</h3>
+				</a>
+				<p>The settings are: frame on, bignumbers off and it&#39;s 97,42 °C.</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">const</span> framework = <span class="hljs-number">1</span>
+<span class="hljs-keyword">const</span> bignumbers = <span class="hljs-number">0</span>
+<span class="hljs-keyword">const</span> temp = <span class="hljs-number">97.42</span></code></pre>
+				<p>output:</p>
+				<pre><code class="language-bash"> -------
+
+ |  -  |
+ | | | |
+ |  -  |
+ |   | |
+ |  -  |
+
+
+ |  -  |
+ |   | |
+ |   | |
+
+
+ |     |
+ |  /  |
+
+
+ | | | |
+ |  -  |
+ |   | |
+
+
+ |  -  |
+ |   | |
+ |  -  |
+ | |   |
+ |  -  |
+
+
+ |  -  |
+ | | | |
+ |  -  |
+
+ |  -  |
+ | |   |
+ | |   |
+ |  -  |
+
+ -------</code></pre>
+				<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
+					<h2>Documentation</h2>
+				</a>
+				<p><a href="https://vives-software-engineering-2020.github.io/examenopdracht-robindeleu/">Link to extra documentation</a></p>
+				<a href="#authors" id="authors" style="color: inherit; text-decoration: none;">
+					<h2>Authors</h2>
+				</a>
+				<ul>
+					<li><strong>Robin Deleu</strong> - <em>Student VIVES University of Applied Sciences</em></li>
+				</ul>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
+				<p>This project is licensed under the MIT License see the <a href="LICENSE.md">LICENSE.md</a> file for details</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_numbertosegmentframework_.html">&quot;<wbr>Numbertosegmentframework&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_app_.html">&quot;app&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_arraytosigledigit_.html">&quot;arraytosigledigit&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_configuration_.html">&quot;configuration&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_digitassigment_.html">&quot;digitassigment&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_digitassigmentbig_.html">&quot;digitassigmentbig&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_digitassigmentbigframe_.html">&quot;digitassigmentbigframe&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_digitassigmentframework_.html">&quot;digitassigmentframework&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_numbertosegment_.html">&quot;numbertosegment&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_numbertosegmentbig_.html">&quot;numbertosegmentbig&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_numbertosegmentbigframe_.html">&quot;numbertosegmentbigframe&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_segments_.html">&quot;segments&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_temperatuur_.html">&quot;temperatuur&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_temptoarray_.html">&quot;temptoarray&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>
